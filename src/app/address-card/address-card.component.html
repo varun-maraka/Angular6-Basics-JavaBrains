@@ -1,6 +1,8 @@
 <div class="address-card">
     <h3 class="name">{{userObj.name}}</h3>
     <p class="title">{{userObj.designation}}</p>
+    <input type="text" [value]="inputText">{{inputText}}
+    <input type="text" [(ngModel)]="inputText">{{inputText}}
     <button (click)="toggleCollapse()"> {{buttText}} </button>
     <div *ngIf="!isCollapsed">
         <h6 class="address">{{userObj.address}}</h6>
@@ -9,5 +11,4 @@
             <h6 *ngFor="let phoneNumber of userObj.phone">{{phoneNumber}}</h6>
         </div>
     </div>
-    
 </div>

@@ -10,6 +10,7 @@ export class AddressCardComponent implements OnInit {
   @Input("userAttb") userObj: User;
   isCollapsed: boolean = true;
   buttText: String = "Expand";
+  inputText: String = "Initial value";
   constructor() { }
   ngOnInit(): void {}
 
