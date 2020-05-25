@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {User} from './address-card/user.model';
+import { FirstServiceService } from './first-service.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import {User} from './address-card/user.model';
 export class AppComponent {
   title = 'second-app';
   user: User;
-  constructor(){
+  constructor(private svc: FirstServiceService ){
+    this.svc.printToConsole("Got the service....")
     this.user = new User();
     this.user = {
       name: "Foo Bar",
