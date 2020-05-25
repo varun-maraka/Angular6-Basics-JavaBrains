@@ -8,8 +8,17 @@ import {User} from './user.model';
 })
 export class AddressCardComponent implements OnInit {
   @Input("userAttb") userObj: User;
+  isCollapsed: boolean = true;
+  buttText: String = "Expand";
   constructor() { }
-  ngOnInit(): void {
-   
+  ngOnInit(): void {}
+
+  toggleCollapse(){
+    this.isCollapsed = !this.isCollapsed;
+    if(this.isCollapsed == true){
+      this.buttText= "Expand";
+    }else{
+      this.buttText= "Collapse";
+    }
   }
 }
