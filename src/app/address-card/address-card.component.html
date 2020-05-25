@@ -1,0 +1,11 @@
+<div>
+    <h3>{{user.name}}</h3>
+    <h6>{{user.title}}</h6>
+    <h6>{{user.address}}</h6>
+    <div>
+        <h6>Phone:</h6>
+        <h6 *ngFor="let phoneNumber of user.phone">{{phoneNumber}}</h6>
+        <h6>{{user.phone[0]}}</h6>
+        <h6>{{user.phone[1]}}</h6>
+    </div>
+</div>
