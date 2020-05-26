@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {User} from './address-card/user.model';
 import { FirstServiceService } from './first-service.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { FirstServiceService } from './first-service.service';
 export class AppComponent {
   title = 'second-app';
   user: User;
-  constructor(private svc: FirstServiceService ){
+  apiResponse= null;
+  constructor(private svc: FirstServiceService, private http:HttpClient ){
     this.svc.printToConsole("Got the service....")
     this.user = new User();
     this.user = {
@@ -21,5 +23,13 @@ export class AppComponent {
         '323-323-2342','23423'
       ]
     }
+  }
+  ngOnInit(){
+    let obs = this.http.get('https://api.github.com/users/varun-maraka');
+    obs.subscribe((response)=>{
+          console.log("Got the response..."+ response);
+            this.apiResponse = response["login"] + " " +response["name"] + " " +response["url"];
+          }
+        );
   }
 }
