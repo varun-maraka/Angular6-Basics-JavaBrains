@@ -8,13 +8,15 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { HelloDateComponent } from './hello-date/hello-date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { FirstServiceService } from './first-service.service';
+import { SearchSegmentComponent } from './search-segment/search-segment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
     HelloDateComponent,
-    AddressCardComponent
+    AddressCardComponent,
+    SearchSegmentComponent
   ],
   imports: [
     BrowserModule,
