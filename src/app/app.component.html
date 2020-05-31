@@ -342,6 +342,17 @@
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
+  <p>Full Page refresh</p>
+  <a href="/home">Home   </a>
+  <a href="/settings">Settings   </a>
+  <p>Using Angular routerLink directive </p>
+  <a routerLink="home">Home   </a>
+  <a routerLink="settings">Settings   </a>
+  <p>Using refered variables </p>
+  <a [routerLink]="homeRoute">Home   </a>
+  <a [routerLink]="settingsRoute">Settings   </a>
+  <p>Using ng For</p>
+  <a *ngFor="let route of routes" [routerLink]="route.url">{{route.linkName}}   </a>
   <router-outlet></router-outlet>
   <div>
     <h1>

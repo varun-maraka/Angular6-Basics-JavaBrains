@@ -12,6 +12,14 @@ export class AppComponent {
   title = 'second-app';
   user: User;
   apiResponse= null;
+
+  homeRoute = 'home';
+  settingsRoute = "settings";
+
+  routes =[
+    {linkName: 'Home ', url: 'home'},
+    {linkName: 'Settings ', url: 'settings'}
+  ]
   constructor(private svc: FirstServiceService, private http:HttpClient ){
     this.svc.printToConsole("Got the service....")
     this.user = new User();
