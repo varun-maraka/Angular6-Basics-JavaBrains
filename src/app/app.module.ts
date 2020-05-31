@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeCompComponent } from './home-comp/home-comp.component';
 import { SettingsCompComponent } from './settings-comp/settings-comp.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SettingChile1ProfileComponent } from './setting-chile1-profile/setting-chile1-profile.component';
+import { SettingChild2ContactComponent } from './setting-child2-contact/setting-child2-contact.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SearchSegmentComponent,
     HomeCompComponent,
     SettingsCompComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SettingChile1ProfileComponent,
+    SettingChild2ContactComponent
   ],
   imports: [
     BrowserModule,
