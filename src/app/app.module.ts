@@ -12,6 +12,7 @@ import { SearchSegmentComponent } from './search-segment/search-segment.componen
 import { AppRoutingModule } from './app-routing.module';
 import { HomeCompComponent } from './home-comp/home-comp.component';
 import { SettingsCompComponent } from './settings-comp/settings-comp.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SettingsCompComponent } from './settings-comp/settings-comp.component';
     AddressCardComponent,
     SearchSegmentComponent,
     HomeCompComponent,
-    SettingsCompComponent
+    SettingsCompComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
