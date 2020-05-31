@@ -9,6 +9,9 @@ import { HelloDateComponent } from './hello-date/hello-date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { FirstServiceService } from './first-service.service';
 import { SearchSegmentComponent } from './search-segment/search-segment.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeCompComponent } from './home-comp/home-comp.component';
+import { SettingsCompComponent } from './settings-comp/settings-comp.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,15 @@ import { SearchSegmentComponent } from './search-segment/search-segment.componen
     HelloWorldComponent,
     HelloDateComponent,
     AddressCardComponent,
-    SearchSegmentComponent
+    SearchSegmentComponent,
+    HomeCompComponent,
+    SettingsCompComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     FirstServiceService
